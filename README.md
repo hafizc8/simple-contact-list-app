@@ -1,16 +1,16 @@
-# my_contact_app
+# Simple Contact List App
 
-A new Flutter project.
+Made with flutter
+
+## Techstack
+- Getx State Management
+- Dio
+- Google Fonts
+
+This project is made for assessment testing flutter engineer in PT. Global Infotech Solutions
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Pull this repository
+- Run command "flutter pub clean"
+- Then run command "flutter pub get"
+- And running in your device with command "flutter run"
