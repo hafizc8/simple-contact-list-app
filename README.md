@@ -22,3 +22,4 @@ This project is made for assessment testing flutter engineer in PT. Global Infot
 
 ## Integration Testing
 To run integration testing, run command "flutter drive --driver=test_driver/integration_test_driver.dart --target=integration_test/app_test.dart"
+- This integration test include check is data has loaded, add new contact, and check if data has added
