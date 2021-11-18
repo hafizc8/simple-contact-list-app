@@ -19,3 +19,6 @@ This project is made for assessment testing flutter engineer in PT. Global Infot
 - Run command "flutter pub clean"
 - Then run command "flutter pub get"
 - And running in your device with command "flutter run"
+
+## Integration Testing
+To run integration testing, run command "flutter drive --driver=test_driver/integration_test_driver.dart --target=integration_test/app_test.dart"
