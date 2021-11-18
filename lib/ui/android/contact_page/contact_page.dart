@@ -62,7 +62,7 @@ class _ContactPageState extends State<ContactPage> {
               initState: (state) => Get.find<ContactController>().getContactList(),
               builder: (c) {
                 if (c.contactData.isEmpty) {
-                  return const Text("Getting data ..");
+                  return const Center(child: Text("Getting data ..", key: Key("loadingText")));
                 }
 
                 return ListView.builder(

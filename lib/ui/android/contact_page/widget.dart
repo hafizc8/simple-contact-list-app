@@ -11,6 +11,7 @@ class PersonList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: Key("PERSON_LIST-${data.id}"),
       margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
       child: Column(
