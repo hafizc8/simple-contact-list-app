@@ -21,10 +21,15 @@ class _ContactPageState extends State<ContactPage> {
       appBar: AppBar(
         title: const Text("Manage Contacts"),
         actions: [
-          IconButton(onPressed: () => Get.toNamed(Routes.ADD), icon: const Icon(Icons.add))
+          IconButton(
+            key: const Key("BUTTON_TO_ADD_CONTACT"),
+            onPressed: () => Get.toNamed(Routes.ADD), 
+            icon: const Icon(Icons.add)
+          )
         ],
       ),
       body: SingleChildScrollView(
+        key: const Key('SingleChildScrollKey'),
         child: Column(
           children: [
             ///

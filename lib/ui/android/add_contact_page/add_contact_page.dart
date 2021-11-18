@@ -55,6 +55,7 @@ class _AddContactPageState extends State<AddContactPage> {
             child: Column(
               children: [
                 TextFormField(
+                  key: const Key("CONTACT_NAME_TEXT"),
                   controller: _nameC,
                   decoration: InputDecoration(
                     hintStyle: cardTextStyle.copyWith(fontSize: 12,),
@@ -71,6 +72,7 @@ class _AddContactPageState extends State<AddContactPage> {
                 ),
                 const SizedBox(height: 25),
                 TextFormField(
+                  key: const Key("CONTACT_EMAIL_TEXT"),
                   controller: _emailC,
                   decoration: InputDecoration(
                     hintStyle: cardTextStyle.copyWith(fontSize: 12,),
@@ -91,6 +93,7 @@ class _AddContactPageState extends State<AddContactPage> {
                 ),
                 const SizedBox(height: 25),
                 TextFormField(
+                  key: const Key("CONTACT_PHONE_TEXT"),
                   controller: _phoneC,
                   decoration: InputDecoration(
                     hintStyle: cardTextStyle.copyWith(fontSize: 12,),
@@ -112,6 +115,7 @@ class _AddContactPageState extends State<AddContactPage> {
                 ),
                 const SizedBox(height: 25),
                 TextFormField(
+                  key: const Key("CONTACT_NOTES_TEXT"),
                   controller: _notesC,
                   decoration: InputDecoration(
                     hintStyle: cardTextStyle.copyWith(fontSize: 12,),
@@ -122,6 +126,7 @@ class _AddContactPageState extends State<AddContactPage> {
                 ),
                 const SizedBox(height: 25),
                 TagEditor(
+                  key: const Key("CONTACT_LABEL_TEXT"),
                   length: _labels.length,
                   delimiters: [',', ' '],
                   hasAddButton: true,
@@ -142,6 +147,7 @@ class _AddContactPageState extends State<AddContactPage> {
                   width: double.infinity,
                   height: 45,
                   child: ElevatedButton(
+                    key: const Key("CONTACT_BTN_SAVE"),
                     onPressed: () => _submitForm(),
                     child: Text("Save", style: cardTextStyle.copyWith(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black87),),
                     style: ButtonStyle(
