@@ -33,10 +33,16 @@ dependencies:
     sdk: flutter
   get: ^4.3.8
   google_fonts: ^2.1.0
+  intl: ^0.17.0
+  material_tag_editor: ^0.1.1
 
 dev_dependencies:
+  flutter_driver:
+    sdk: flutter
   flutter_lints: ^1.0.0
   flutter_test:
+    sdk: flutter
+  integration_test:
     sdk: flutter
 
 # For information on the generic Dart part of this file, see the

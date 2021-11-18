@@ -8,3 +8,9 @@ final ThemeData appThemeData = ThemeData(
   highlightColor: Colors.purple,
   textTheme: GoogleFonts.latoTextTheme()
 );
+
+class Themes {
+  static final dark = ThemeData.dark().copyWith(
+    backgroundColor: Colors.black,
+  );
+}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_contact_app/controller/contact/contact_controller.dart';
+import 'package:my_contact_app/routes/app_pages.dart';
 import 'package:my_contact_app/ui/android/contact_page/widget.dart';
 import 'package:my_contact_app/ui/theme/app_text_theme.dart';
 
@@ -20,7 +21,7 @@ class _ContactPageState extends State<ContactPage> {
       appBar: AppBar(
         title: const Text("Manage Contacts"),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.add))
+          IconButton(onPressed: () => Get.toNamed(Routes.ADD), icon: const Icon(Icons.add))
         ],
       ),
       body: SingleChildScrollView(
@@ -32,17 +33,17 @@ class _ContactPageState extends State<ContactPage> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               height: 60,
-              color: Colors.white,
+              color: Colors.black12,
               child: Row(
                 children: [
-                  const Icon(Icons.search, color: Color(0xFF808080)),
+                  const Icon(Icons.search, color: Colors.white),
                   const SizedBox(width: 15),
                   Flexible(
                     child: TextField(
                       controller: _findKeyword,
                       decoration: InputDecoration(
-                        hintStyle: cardTextStyle.copyWith(fontSize: 12, color: const Color(0xFF616161)),
-                        hintText: "Find Something ..",
+                        hintStyle: cardTextStyle.copyWith(fontSize: 12),
+                        hintText: "Type here for find Something ..",
                         border: InputBorder.none,
                       ),
                       onChanged: (query) {
@@ -60,6 +61,10 @@ class _ContactPageState extends State<ContactPage> {
             GetX<ContactController>(
               initState: (state) => Get.find<ContactController>().getContactList(),
               builder: (c) {
+                if (c.contactData.isEmpty) {
+                  return const Text("Getting data ..");
+                }
+
                 return ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
@@ -69,7 +74,7 @@ class _ContactPageState extends State<ContactPage> {
                   },
                 );
               },
-            )
+            ),
           ],
         ),
       ),

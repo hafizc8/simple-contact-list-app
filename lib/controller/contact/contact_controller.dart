@@ -34,4 +34,12 @@ class ContactController extends GetxController {
         || e.phone!.toLowerCase().contains(query.toLowerCase());
     }).toList();
   }
+
+  ///
+  /// Function for add data
+  /// this function add data to current array, because api post data not available
+  ///
+  dynamic addData({required ContactModel newData}) {
+    contactData.add(newData.copyWith(id: contactData.length+1));
+  }
 }
