@@ -12,8 +12,6 @@ Made with flutter
 - Dio
 - Google Fonts
 
-This project is made for assessment testing flutter engineer in PT. Global Infotech Solutions
-
 ## Getting Started
 - Pull this repository
 - Run command "flutter pub clean"
